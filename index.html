@@ -1,31 +1,79 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <!-- manifest.jsonを呼び出しています -->
-  <link rel="manifest" href="./manifest.json">
-  <script>
-    // service workerが有効なら、service-worker.js を登録します
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('./service-worker.js').then(function() { console.log('Service Worker Registered'); });
-   }
-  </script>
-  <title>Hello PWA.</title>
-  <style>
-    body {
-      text-align:center;
-      font-size: 40px;
-      vertical-align: middle;
-    }
-    .image {
-      width: 80%; 
-      margin: auto;
-      display: block;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to Japanese Tea</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            color: #4CAF50;
+        }
+        h2 {
+            color: #388E3C;
+        }
+        p {
+            margin: 0 0 20px;
+        }
+        .tea-type {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        .link {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .link a {
+            text-decoration: none;
+            color: #fff;
+            background-color: #4CAF50;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+    </style>
 </head>
 <body>
-  <h1>Hello PWA.</h1>
-  <img src="./pwa-logo.svg" alt="PWA logo" class="image" />
-  <a href="p.html">p.html</a>
-  <script defer src="https://cdn-test-20211108.s3.ap-northeast-1.amazonaws.com/service/doNotDelete.js"></script>
+    <div class="container">
+        <h1>Introduction to Japanese Tea</h1>
+        <p>Japan has a variety of tea types. Here, we introduce some of the most representative ones.</p>
+
+        <div class="tea-type">
+            <h2>Green Tea</h2>
+            <p>Green tea is the most common tea in Japan. It is highly nutritious and considered good for health, especially rich in vitamin C and catechins.</p>
+        </div>
+
+        <div class="tea-type">
+            <h2>Matcha</h2>
+            <p>Matcha is powdered green tea used in tea ceremonies. It is known for its rich flavor and vibrant green color.</p>
+        </div>
+
+        <div class="tea-type">
+            <h2>Hojicha</h2>
+            <p>Hojicha is roasted green tea with a distinctive toasty aroma. It has low caffeine content, making it a good choice for drinking in the evening.</p>
+        </div>
+
+        <div class="tea-type">
+            <h2>Genmaicha</h2>
+            <p>Genmaicha is a blend of green tea and roasted brown rice. It has a unique aroma and flavor.</p>
+        </div>
+
+        <div class="link">
+            <a href="https://www.jjmarket.com" target="_blank">Purchase tea at JJ Market</a>
+        </div>
+    </div>
 </body>
 </html>
